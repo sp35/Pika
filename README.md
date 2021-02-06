@@ -1,5 +1,10 @@
 <h1>Setup</h1>
 
+<h3>Clone the repository</h3>
+<pre>git clone https://github.com/sp35/Pika.git</pre>
+<h3>Shift to the project repository</h3>
+<pre>cd Pika/</pre>
+
 <h3>Make a new Virtual Environment and activate it</h3>
 <pre>virtualenv -p python3 venv
 source venv/bin/activate</pre>

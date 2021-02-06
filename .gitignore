@@ -2,3 +2,4 @@ venv/
 ss/
 .vscode/
 __pycache__/
+keyconfig.py
