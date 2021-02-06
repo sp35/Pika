@@ -31,7 +31,8 @@ def grab_image():
 def upload_to_channel(file_path):
     try:
         bot = telepot.Bot(senv.TBOT_TOKEN)
-        bot.sendPhoto(senv.TBOT_CHAT_ID, photo=open(file_path, 'rb'))
+        for CHAT_ID in senv.TBOT_CHAT_ID:
+            bot.sendPhoto(CHAT_ID, photo=open(file_path, 'rb'))
         print("File Uploaded to Channel")
     except Exception as e:
         print("Check Telegram Setup", str(e))
