@@ -20,3 +20,10 @@ TBOT_CHAT_ID = ["________ CHAT ID 1________", "________ CHAT ID 2 ________"]
 
 <h3>Run the script (root access required)</h3>
 <pre>sudo venv/bin/python main.py</pre>
+
+<h1>Output</h1>
+<pre>(venv) shubham@shubham-dell-l3350:~/Projects/Pika$ sudo venv/bin/python main.py [sudo] password for shubham: 
+Press Shift+F1 anytime to take a ss
+Press Ctrl+C to quit
+Image saved at ss/pic_61e9c554-37f3-4a87-8802-dbfe58bdd82b.png
+File Uploaded to Channel</pre>
