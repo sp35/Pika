@@ -3,3 +3,5 @@ ss/
 .vscode/
 __pycache__/
 keyconfig.py
+*.log
+bg_pid.txt
