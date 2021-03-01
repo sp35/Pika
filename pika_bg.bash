@@ -13,7 +13,7 @@ _kill_prev_process () {
 start_pika () {
     _kill_prev_process
     printf "\nStarting...\n"
-    sudo nohup timeout 7500 venv/bin/python main.py > pika.log 2>&1 &
+    sudo nohup venv/bin/python main.py > pika.log 2>&1 &
     echo $! > bg_pid.txt
     echo "Started $!"
 }
