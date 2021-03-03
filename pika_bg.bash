@@ -4,7 +4,7 @@ _kill_prev_process () {
     if [ -f ./bg_pid.txt ]
     then
         printf "\nKilling prev process...\n"
-        sudo kill -9 "$(cat bg_pid.txt)"
+        kill -9 "$(cat bg_pid.txt)"
         echo "Killed $(cat bg_pid.txt)"
         rm bg_pid.txt
     fi
@@ -13,12 +13,21 @@ _kill_prev_process () {
 start_pika () {
     _kill_prev_process
     printf "\nStarting...\n"
-    sudo nohup venv/bin/python main.py > pika.log 2>&1 &
-    echo $! > bg_pid.txt
+    nohup venv/bin/python main.py > pika.log 2>&1 & echo $! > bg_pid.txt
     echo "Started $!"
 }
 
+_rootcheck () {
+    if [ "$(id -u)" != "0" ]
+    then
+        echo "Please use sudo (root access required)"
+        exit
+    fi
+}
+
 main () {
+    _rootcheck
+
     printf "start?  y\nend?    n\n"
     read -n1 ACTION
 
