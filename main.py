@@ -61,13 +61,9 @@ def main():
 if __name__ == "__main__":
     try:
         lock = threading.Lock()
-        main_thread = threading.Thread(target=main, daemon=True)
         upload_thread = threading.Thread(target=upload_to_channel, daemon=True)
-        main_thread.start()
         upload_thread.start()
-        
-        while True:
-            time.sleep(1)
+        main()
     except KeyboardInterrupt:
         sys.exit(130)
     except Exception as e:
