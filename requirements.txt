@@ -32,6 +32,6 @@ retrying==1.3.3
 six==1.14.0
 telepot==12.7
 typing-extensions==3.7.4.3
-urllib3==1.24.2
+urllib3==1.26.5
 webencodings==0.5.1
 yarl==1.6.3
